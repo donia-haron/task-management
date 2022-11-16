@@ -38,6 +38,27 @@ Route::group(['middleware'=>['admin']],function(){
 
 /** Category routes end */
 
+
+/** Company routes start */
+Route::group(['middleware'=>['admin']],function(){
+    Route::get('/companies','CompanyController@index')->name('company.index');
+    Route::get('/companies/create','CompanyController@create')->name('company.create');
+    Route::post('/companies/store','CompanyController@store')->name('company.store');
+    Route::get('/companies/{id}/edit','CompanyController@edit')->name('company.edit');
+    Route::post('/companies/{id}/update','CompanyController@update')->name('company.update');
+    Route::delete('/companies/{id}/delete','CompanyController@destroy')->name('company.destroy');
+});
+/** employee routes start */
+Route::group(['middleware'=>['admin']],function(){
+    Route::get('/employees','EmployeeController@index')->name('employee.index');
+    Route::get('/employees/create','EmployeeController@create')->name('employee.create');
+    Route::post('/employees/store','EmployeeController@store')->name('employee.store');
+    Route::get('/employees/{id}/edit','EmployeeController@edit')->name('employee.edit');
+    Route::post('/employees/{id}/update','EmployeeController@update')->name('employee.update');
+    Route::delete('/employees/{id}/delete','EmployeeController@destroy')->name('employee.destroy');
+});
+
+
 /** Task routes start */
 
 Route::group(['middleware'=>['admin']],function(){

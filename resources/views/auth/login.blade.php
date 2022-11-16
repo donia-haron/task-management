@@ -75,6 +75,8 @@
                       </div>
                     </div>
                   </form>
+
+                  <a href="{{ url('/register/') }}" class="btn btn-xs btn-info pull-right">Register</a>
             </div>
           </div>
         </div>

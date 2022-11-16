@@ -32,6 +32,16 @@
                 <a href="{{route('project_task.finished')}}" class="dropdown-item {{Request::is('project_tasks/finished')?'active':''}}">Finished Tasks</a>
             </div>
         </li>
+        <li class="nav-item" style="margin:10px">
+        <div class="dropdown-menu-arrow" >
+        <a href="{{route('company.index')}}" >Companies</a>
+</div>
+</li>
+<li class="nav-item" style="margin:10px">
+<div >
+        <a href="{{route('employee.index')}}" >Employees</a>
+</div>
+    </li>
         </ul>
     </div>
 </div>
